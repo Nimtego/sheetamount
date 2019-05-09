@@ -8,4 +8,15 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--<style name="AppTheme.Root" parent="AppTheme.NoActionBar">-->
+        <!--<item name="actionBarContentOverlayStyle">@style/ContentOverlay</item>-->
+        <!--<item name="toolbarTheme">@style/ToolbarTheme</item>-->
+    <!--</style>-->
+
+
 </resources>
