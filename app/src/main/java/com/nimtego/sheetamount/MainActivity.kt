@@ -1,9 +1,9 @@
 package com.nimtego.sheetamount
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.arellomobile.mvp.MvpAppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : MvpAppCompatActivity(), MainView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
