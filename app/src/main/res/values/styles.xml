@@ -4,7 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/edit_text_color</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -31,13 +31,22 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="TextInputEditText" parent="Base.Widget.MaterialComponents.TextInputEditText">
+        <item name="android:textSize">@dimen/rounded_edit_text</item>
+        <item name="android:textColor">@color/edit_text_color</item>
+        <item name="android:textColorHint">@color/edit_text_hint_color</item>
+        <item name="android:textColorHighlight">@color/edit_text_color</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:padding">12dp</item>
+    </style>
 
     <!--<style name="AppTheme.Root" parent="AppTheme.NoActionBar">-->
-        <!--<item name="actionBarContentOverlayStyle">@style/ContentOverlay</item>-->
-        <!--<item name="toolbarTheme">@style/ToolbarTheme</item>-->
+    <!--<item name="actionBarContentOverlayStyle">@style/ContentOverlay</item>-->
+    <!--<item name="toolbarTheme">@style/ToolbarTheme</item>-->
     <!--</style>-->
-
 
 </resources>

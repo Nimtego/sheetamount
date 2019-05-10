@@ -12,6 +12,9 @@
     <dimen name="padding_extra_small">4dp</dimen>
     <dimen name="padding_micro">2dp</dimen>
 
+    <!-- rounded -->
+    <dimen name="rounded_edit_text">12dp</dimen>
+
     <!-- Text size -->
     <!-- Standard Styles -->
     <!-- @link https://www.google.com/design/spec/style/typography.html#typography-styles -->

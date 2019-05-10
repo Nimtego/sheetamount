@@ -10,7 +10,7 @@ class MainActivity : MvpAppCompatActivity(), MainView {
         setContentView(R.layout.activity_main)
         supportFragmentManager
             .beginTransaction()
-            .add(R.id.main_container, BaseAppFragment.getInstance("TEST"))
+            .add(R.id.main_container, UserDataFragment.getInstance("TEST"))
             .commit()
     }
 
