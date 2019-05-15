@@ -11,7 +11,7 @@
             android:id="@+id/status_bar"
             android:layout_width="match_parent"
             android:layout_height="@dimen/android_status_bar_height"
-            android:background="@color/color_button_add_card"/>
+            android:background="@color/color_dialog_alert"/>
 
     <FrameLayout
             android:id="@+id/main_container"
