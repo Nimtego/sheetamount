@@ -26,6 +26,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/current"/>
             <TextView
+                    android:id="@+id/current"
                     android:textColor="@color/edit_text_color"
                     style="@style/TextViewValue"
                     android:layout_marginStart="@dimen/rounded_edit_text"
@@ -50,20 +51,12 @@
                       android:descendantFocusability="beforeDescendants"
                       android:focusableInTouchMode="true">
 
-            <EditText android:layout_width="match_parent"
+            <EditText
+                      android:id="@+id/power"
+                      android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       style="@style/TextInputEditText"
-                      android:layout_marginStart="54dp"
-                      android:layout_marginEnd="54dp"
-                      android:layout_gravity="center"
-                      android:hint="@string/current"
-                      android:background="@drawable/rounded_shape"
-                      android:layout_marginTop="@dimen/confirmation_layout_padding_bottom"
-                      android:drawableStart="@drawable/ic_current_24dp"/>
-
-            <EditText android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      style="@style/TextInputEditText"
+                      android:inputType="number"
                       android:layout_marginStart="54dp"
                       android:layout_marginEnd="54dp"
                       android:layout_gravity="center"
