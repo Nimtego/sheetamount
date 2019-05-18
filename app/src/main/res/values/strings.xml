@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">sheetamount</string>
+    <string name="current">Current</string>
+    <string name="default_value">-/-</string>
 </resources>

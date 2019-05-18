@@ -2,10 +2,73 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/edit_text_color</item>
     </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- startActivityForResult() without showing blank screen first -->
+    <!-- @link https://stackoverflow.com/a/38904761/6180474 -->
+    <!--Also keep in mind this-->
+    <!--https://stackoverflow.com/questions/48072438/java-lang-illegalstateexception-only-fullscreen-opaque-activities-can-request-o-->
+
+    <style name="AppTheme.Translucent" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.TransparentTheme" parent="AppTheme.Translucent">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="TextInputEditText" parent="Base.Widget.MaterialComponents.TextInputEditText">
+        <item name="android:textSize">@dimen/rounded_edit_text</item>
+        <item name="android:textColor">@color/edit_text_color</item>
+        <item name="android:textColorHint">@color/color_vendor_dark_grey_blue</item>
+        <item name="android:textColorHighlight">@color/edit_text_color</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:drawablePadding">10dp</item>
+
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <style name="TextViewValueName" parent="Base.Widget.MaterialComponents.TextInputEditText">
+        <item name="android:textSize">@dimen/rounded_edit_text</item>
+        <item name="android:textColor">@color/edit_text_color</item>
+        <item name="android:textColorHint">@color/color_vendor_dark_grey_blue</item>
+        <item name="android:textColorHighlight">@color/edit_text_color</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <style name="TextViewValue" parent="Base.Widget.MaterialComponents.TextInputEditText">
+        <item name="android:textSize">@dimen/value_text_view</item>
+        <item name="android:textColor">@color/edit_text_color</item>
+        <item name="android:textColorHint">@color/color_vendor_dark_grey_blue</item>
+        <item name="android:textColorHighlight">@color/edit_text_color</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:drawablePadding">2dp</item>
+
+        <item name="android:padding">2dp</item>
+    </style>
+
+    <!--<style name="AppTheme.Root" parent="AppTheme.NoActionBar">-->
+    <!--<item name="actionBarContentOverlayStyle">@style/ContentOverlay</item>-->
+    <!--<item name="toolbarTheme">@style/ToolbarTheme</item>-->
+    <!--</style>-->
 
 </resources>
