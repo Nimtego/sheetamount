@@ -1,10 +1,11 @@
-package com.nimtego.sheetamount
+package com.nimtego.sheetamount.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.arellomobile.mvp.MvpAppCompatFragment
+import com.nimtego.sheetamount.R
 
 open class BaseAppFragment : MvpAppCompatFragment() {
 

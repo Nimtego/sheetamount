@@ -11,28 +11,37 @@
             android:layout_height="150dp"
             android:orientation="vertical"
             android:elevation="4dp"
-            android:background="@color/color_button_add_card">
-
-        <TextView
-                android:textStyle="bold"
-                android:textColor="@color/edit_text_color"
-                android:layout_width="wrap_content"
-                android:layout_marginTop="@dimen/confirmation_layout_padding_bottom"
+            android:background="@color/color_vendor_dark_grey_blue_lighter">
+        <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/app_name"/>
-        <TextView
-                android:textStyle="bold"
-                android:textColor="@color/edit_text_color"
-                android:layout_width="wrap_content"
                 android:layout_marginTop="@dimen/confirmation_layout_padding_bottom"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"/>
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_marginStart="@dimen/rounded_edit_text"
+                    android:textColor="@color/edit_text_color"
+                    android:textSize="14sp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/current"/>
+            <TextView
+                    android:textColor="@color/edit_text_color"
+                    style="@style/TextViewValue"
+                    android:layout_marginStart="@dimen/rounded_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:background="@drawable/rounded_shape"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_value"/>
+        </LinearLayout>
 
     </LinearLayout>
 
     <ScrollView android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/divider_color_active">
+                android:background="@color/color_vendor_dark_grey_blue_lighter">
 
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
@@ -44,29 +53,24 @@
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       style="@style/TextInputEditText"
-                      android:background="@drawable/rounded_shape"
                       android:layout_marginStart="54dp"
                       android:layout_marginEnd="54dp"
                       android:layout_gravity="center"
                       android:hint="@string/current"
+                      android:background="@drawable/rounded_shape"
                       android:layout_marginTop="@dimen/confirmation_layout_padding_bottom"
                       android:drawableStart="@drawable/ic_current_24dp"/>
 
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
-                      android:padding="15dp"
+                      style="@style/TextInputEditText"
                       android:layout_marginStart="54dp"
                       android:layout_marginEnd="54dp"
                       android:layout_gravity="center"
-                      android:drawablePadding="10dp"
-                      android:textSize="16sp"
                       android:hint="@string/current"
-                      android:textColor="@color/edit_text_color"
-                      android:textColorHint="@color/edit_text_hint_color"
-                      android:textColorHighlight="@color/edit_text_color"
+                      android:background="@drawable/rounded_shape"
                       android:layout_marginTop="@dimen/confirmation_layout_padding_bottom"
-                      android:drawableStart="@drawable/ic_current_24dp"
-                      android:background="@drawable/rounded_shape"/>
+                      android:drawableStart="@drawable/ic_current_24dp"/>
 
         </LinearLayout>
 
