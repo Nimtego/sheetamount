@@ -26,7 +26,60 @@
                     android:layout_height="wrap_content"
                     android:text="@string/current"/>
             <TextView
-                    android:id="@+id/current"
+                    android:id="@+id/current380"
+                    android:textColor="@color/edit_text_color"
+                    style="@style/TextViewValue"
+                    android:layout_marginStart="@dimen/rounded_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:background="@drawable/rounded_shape"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_value"/>
+            <TextView
+                    android:id="@+id/current220"
+                    android:textColor="@color/edit_text_color"
+                    style="@style/TextViewValue"
+                    android:layout_marginStart="@dimen/rounded_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:background="@drawable/rounded_shape"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_value"/>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/confirmation_layout_padding_bottom"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:paddingStart="60dp">
+            <TextView
+                    android:id="@+id/current36"
+                    android:textColor="@color/edit_text_color"
+                    style="@style/TextViewValue"
+                    android:layout_marginStart="@dimen/rounded_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:background="@drawable/rounded_shape"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_value"/>
+            <TextView
+                    android:id="@+id/current24"
+                    android:textColor="@color/edit_text_color"
+                    style="@style/TextViewValue"
+                    android:layout_marginStart="@dimen/rounded_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:background="@drawable/rounded_shape"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_value"/>
+            <TextView
+                    android:id="@+id/current12"
                     android:textColor="@color/edit_text_color"
                     style="@style/TextViewValue"
                     android:layout_marginStart="@dimen/rounded_edit_text"
@@ -52,18 +105,18 @@
                       android:focusableInTouchMode="true">
 
             <EditText
-                      android:id="@+id/power"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      style="@style/TextInputEditText"
-                      android:inputType="numberDecimal"
-                      android:layout_marginStart="54dp"
-                      android:layout_marginEnd="54dp"
-                      android:layout_gravity="center"
-                      android:hint="@string/current"
-                      android:background="@drawable/rounded_shape"
-                      android:layout_marginTop="@dimen/confirmation_layout_padding_bottom"
-                      android:drawableStart="@drawable/ic_current_24dp"/>
+                    android:id="@+id/power"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextInputEditText"
+                    android:inputType="numberDecimal"
+                    android:layout_marginStart="54dp"
+                    android:layout_marginEnd="54dp"
+                    android:layout_gravity="center"
+                    android:hint="@string/current"
+                    android:background="@drawable/rounded_shape"
+                    android:layout_marginTop="@dimen/confirmation_layout_padding_bottom"
+                    android:drawableStart="@drawable/ic_current_24dp"/>
 
         </LinearLayout>
 

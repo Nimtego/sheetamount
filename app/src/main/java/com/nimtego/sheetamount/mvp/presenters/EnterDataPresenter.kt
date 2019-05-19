@@ -8,12 +8,18 @@ import com.nimtego.sheetamount.mvp.view_model.CalculateData
 @InjectViewState
 class EnterDataPresenter : BasePresenter<EnterDataView>() {
     fun dataChange(enterDateModel: EnterDateModel) {
-        viewState.changeCurrent(CalculateData(calculate(enterDateModel)))
+        val calculateData = calculate(enterDateModel)
+        viewState.changeCurrent(calculateData)
     }
 
-    private fun calculate(enterDateModel: EnterDateModel): Double {
-        val current = enterDateModel.power / 0.6574
-        return Math.round(current * 100.0) / 100.0
+    private fun calculate(enterDateModel: EnterDateModel): CalculateData {
+        val power = enterDateModel.power
+
+        return CalculateData(current380 = Math.round((power / 0.6574) * 100.0) / 100.0,
+                             current220 = Math.round((power / 0.22) * 100.0) / 100.0,
+                             current36  = Math.round((power / 0.036) * 100.0) / 100.0,
+                             current24  = Math.round((power / 0.024) * 100.0) / 100.0,
+                             current12  = Math.round((power / 0.012) * 100.0) / 100.0)
 
     }
 }

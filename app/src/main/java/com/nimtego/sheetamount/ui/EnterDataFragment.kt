@@ -6,6 +6,8 @@ import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.TextView
 import com.arellomobile.mvp.MvpAppCompatFragment
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.nimtego.sheetamount.R
@@ -21,6 +23,8 @@ class EnterDataFragment : MvpAppCompatFragment(), EnterDataView {
 
     @InjectPresenter
     internal lateinit var presenter: EnterDataPresenter
+
+    lateinit var listView: List<TextView>
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_add_user_data, container, false)
@@ -47,16 +51,26 @@ class EnterDataFragment : MvpAppCompatFragment(), EnterDataView {
             ) {
             }
         })
+        this.listView = listOf(current380,
+                               current220,
+                               current36,
+                               current24,
+                               current12)
     }
 
 // MARK: view methods
 
     override fun clearData() {
+        setDefaultCurrent()
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun changeCurrent(calculateData: CalculateData) {
-        current.text = calculateData.current.toString()
+        current380.text = calculateData.current380.toString()
+        current220.text = calculateData.current220.toString()
+        current36.text = calculateData.current36.toString()
+        current24.text = calculateData.current24.toString()
+        current12.text = calculateData.current12.toString()
     }
 
 // MARK: private methods
@@ -66,8 +80,12 @@ class EnterDataFragment : MvpAppCompatFragment(), EnterDataView {
             this.presenter.dataChange(EnterDateModel(power.text.toString().toDouble()))
         }
         else {
-            current.text = "-/-"
+            setDefaultCurrent()
         }
+    }
+
+    private fun setDefaultCurrent() {
+        this.listView.forEach { it.text = "-/-" }
     }
 
     companion object {
