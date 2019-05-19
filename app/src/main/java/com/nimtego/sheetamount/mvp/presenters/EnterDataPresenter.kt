@@ -12,7 +12,7 @@ class EnterDataPresenter : BasePresenter<EnterDataView>() {
     }
 
     private fun calculate(enterDateModel: EnterDateModel): Double {
-        val current = enterDateModel.power / 0.65
+        val current = enterDateModel.power / 0.6574
         return Math.round(current * 100.0) / 100.0
 
     }

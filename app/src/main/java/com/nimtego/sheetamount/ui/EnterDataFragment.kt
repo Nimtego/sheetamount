@@ -62,7 +62,12 @@ class EnterDataFragment : MvpAppCompatFragment(), EnterDataView {
 // MARK: private methods
 
     private fun dataSetChange() {
-        this.presenter.dataChange(EnterDateModel(power.text.toString().toDouble()))
+        if (power.text.isNotEmpty()) {
+            this.presenter.dataChange(EnterDateModel(power.text.toString().toDouble()))
+        }
+        else {
+            current.text = "-/-"
+        }
     }
 
     companion object {
